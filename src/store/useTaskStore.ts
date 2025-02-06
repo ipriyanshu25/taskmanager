@@ -28,7 +28,7 @@ const initialTasks: Task[] = [
     title: 'Company Roadmap',
     description: 'Create quarterly strategic plan',
     status: 'backlog',
-    assignees: ['Jane Cooper'],
+    assignees: ['Jane'],
     startDate: new Date().toISOString(),
     endDate: new Date(new Date().setDate(new Date().getDate() + 10)).toISOString(),
     progress: 0,
@@ -40,7 +40,7 @@ const initialTasks: Task[] = [
     title: 'Communication Plan',
     description: 'Develop team communication strategy',
     status: 'in-progress',
-    assignees: ['Mike Wilson'],
+    assignees: ['Mike'],
     startDate: new Date().toISOString(),
     endDate: new Date(new Date().setDate(new Date().getDate() + 5)).toISOString(),
     progress: 50,
@@ -52,14 +52,13 @@ const initialTasks: Task[] = [
     title: 'API Documentation',
     description: 'Update technical documentation',
     status: 'paused',
-    assignees: ['Jane Cooper', 'Mike Wilson'],
+    assignees: ['Jane', 'Mike'],
     startDate: new Date().toISOString(),
     endDate: new Date(new Date().setDate(new Date().getDate() + 8)).toISOString(),
     progress: 30,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
-  // Adding new tasks
   {
     id: uuidv4(),
     title: 'Main page update',
@@ -84,30 +83,6 @@ const initialTasks: Task[] = [
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   },
-  {
-    id: uuidv4(),
-    title: 'Profile Optimization',
-    description: 'Optimize user profile page',
-    status: 'backlog',
-    assignees: ['Sarah Chen'],
-    startDate: new Date(new Date().setDate(new Date().getDate() + 3)).toISOString(),
-    endDate: new Date(new Date().setDate(new Date().getDate() + 7)).toISOString(),
-    progress: 0,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  },
-  {
-    id: uuidv4(),
-    title: 'New feature: Workspaces',
-    description: 'Implement team workspaces feature',
-    status: 'in-progress',
-    assignees: ['John Smith', 'Mike Wilson', 'Jane Cooper'],
-    startDate: new Date(new Date().setDate(new Date().getDate() + 1)).toISOString(),
-    endDate: new Date(new Date().setDate(new Date().getDate() + 12)).toISOString(),
-    progress: 15,
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString()
-  }
 ];
 
 const useTaskStore = create<TaskStore>((set) => ({
